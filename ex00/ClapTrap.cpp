@@ -6,7 +6,7 @@
 /*   By: relamine <relamine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 02:50:54 by relamine          #+#    #+#             */
-/*   Updated: 2024/11/21 04:34:11 by relamine         ###   ########.fr       */
+/*   Updated: 2024/11/21 07:15:59 by relamine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,8 +49,8 @@ void ClapTrap::attack(const std::string& target)
 	if (!this->Energy_points || !this->Hit_points)
 		return ;
 	this->Energy_points--;
-	std::cout << "ClapTrap" << this->Name
-		<< "attacks" << target
+	std::cout << "ClapTrap " << this->Name
+		<< " attacks " << target
 		<<", causing " << this->Attack_damage
 		<<" points of damage!" 
 		<< std::endl;
@@ -62,7 +62,7 @@ void ClapTrap::takeDamage(unsigned int amount)
 		this->Hit_points = 0;
 	else
 		this->Hit_points -= amount;
-	std::cout << "ClapTrap" << this->Name
+	std::cout << "ClapTrap " << this->Name
 		<< "lose " << amount << " hit points"
 		<< std::endl;
 }
@@ -76,7 +76,7 @@ void ClapTrap::beRepaired(unsigned int amount)
 	else
 		this->Hit_points += amount;
 	this->Energy_points--;
-	std::cout << "ClapTrap" << this->Name
+	std::cout << "ClapTrap " << this->Name
 		<< "gets " << amount << " hit points back"
 		<< std::endl;
 }
