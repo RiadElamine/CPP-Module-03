@@ -6,7 +6,7 @@
 /*   By: relamine <relamine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 02:50:49 by relamine          #+#    #+#             */
-/*   Updated: 2024/11/21 07:18:00 by relamine         ###   ########.fr       */
+/*   Updated: 2024/11/21 08:15:56 by relamine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,4 +22,5 @@ int main()
 	l.beRepaired(10);
 	l.attack("Marshall D. Teach");
 	t.takeDamage(20);
+	t.guardGate();
 }
