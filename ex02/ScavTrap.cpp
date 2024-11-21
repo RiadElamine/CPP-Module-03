@@ -6,7 +6,7 @@
 /*   By: relamine <relamine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 04:51:43 by relamine          #+#    #+#             */
-/*   Updated: 2024/11/21 08:52:38 by relamine         ###   ########.fr       */
+/*   Updated: 2024/11/21 07:12:10 by relamine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ ScavTrap::ScavTrap(std::string Name) : ClapTrap(Name)
 ScavTrap::ScavTrap(const ScavTrap& c)
 {
 	*this = c;
-	std::cout << "Copy of ScavTrap " << this->Name << " is born" << std::endl;
+	std::cout << "ScavTrap " << this->Name << " is born" << std::endl;
 }
 
 ScavTrap& ScavTrap::operator=(const ScavTrap& c)
@@ -34,7 +34,7 @@ ScavTrap& ScavTrap::operator=(const ScavTrap& c)
 	this->Hit_points = c.Hit_points;
 	this->Energy_points = c.Energy_points;
 	this->Attack_damage = c.Attack_damage;
-	std::cout << "Copy assignment of ScavTrap " << this->Name << " is born" << std::endl;
+	std::cout << "Copy of ScavTrap " << this->Name << " is born" << std::endl;
 	return (*this);
 }
 
@@ -57,5 +57,5 @@ void ScavTrap::attack(const std::string& target)
 
 void ScavTrap::guardGate()
 {
-	std::cout << "ScavTrap " << this->Name << " is now in Gate keeper mode 🛡️" << std::endl;
+	std::cout << "ScavTrap " << this->Name << " is now in Gate keeper mode" << std::endl;
 }

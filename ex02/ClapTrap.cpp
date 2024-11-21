@@ -6,7 +6,7 @@
 /*   By: relamine <relamine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 02:50:54 by relamine          #+#    #+#             */
-/*   Updated: 2024/11/21 08:52:21 by relamine         ###   ########.fr       */
+/*   Updated: 2024/11/21 07:15:56 by relamine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ ClapTrap::ClapTrap(std::string Name)
 ClapTrap::ClapTrap(const ClapTrap& c)
 {
 	*this = c;
-	std::cout << "Copy of ClapTrap " << Name << " is born" << std::endl;
+	std::cout << "ClapTrap " << Name << " is born" << std::endl;
 }
 
 ClapTrap& ClapTrap::operator=(const ClapTrap& c)
@@ -35,7 +35,7 @@ ClapTrap& ClapTrap::operator=(const ClapTrap& c)
 	this->Hit_points = c.Hit_points;
 	this->Energy_points = c.Energy_points;
 	this->Attack_damage = c.Attack_damage;
-	std::cout << "Copy assignment of ClapTrap " << Name << " is born" << std::endl;
+	std::cout << "Copy of ClapTrap " << Name << " is born" << std::endl;
 	return (*this);
 }
 
@@ -49,8 +49,8 @@ void ClapTrap::attack(const std::string& target)
 	if (!this->Energy_points || !this->Hit_points)
 		return ;
 	this->Energy_points--;
-	std::cout << "ClapTrap " << this->Name
-		<< " attacks " << target
+	std::cout << "ClapTrap" << this->Name
+		<< "attacks" << target
 		<<", causing " << this->Attack_damage
 		<<" points of damage!" 
 		<< std::endl;
