@@ -10,7 +10,9 @@ HEARDER = ClapTrap.hpp ScavTrap.hpp
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-all : $(OBJECT)
+all : $(NAME)
+
+$(NAME): $(OBJECT)
 	c++ $(CFLAGS) $(OBJECT) -o $(NAME)
 
 %.o: %.cpp $(HEARDER)
