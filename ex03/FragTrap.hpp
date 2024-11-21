@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: relamine <relamine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/20 02:50:49 by relamine          #+#    #+#             */
-/*   Updated: 2024/11/21 12:58:25 by relamine         ###   ########.fr       */
+/*   Created: 2024/11/21 07:24:40 by relamine          #+#    #+#             */
+/*   Updated: 2024/11/21 12:07:34 by relamine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "FragTrap.hpp"
+#pragma once
+#include "ClapTrap.hpp"
 
-int main()
+class FragTrap : virtual public ClapTrap
 {
-	FragTrap l("Luffy");
-	FragTrap t("Teach");
-
-	t.attack("Luffy");
-	l.takeDamage(20);
-	l.beRepaired(10);
-	l.attack("Teach");
-	t.takeDamage(20);
-	l.highFivesGuys();
-}
+	public :
+		FragTrap();
+		FragTrap(std::string Name);
+		FragTrap(const FragTrap& c);
+		FragTrap& operator=(const FragTrap& c);
+		~FragTrap();
+		void attack(const std::string& target);
+		void highFivesGuys(void);
+};

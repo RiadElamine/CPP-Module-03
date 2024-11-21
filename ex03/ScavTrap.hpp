@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: relamine <relamine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/20 02:50:49 by relamine          #+#    #+#             */
-/*   Updated: 2024/11/21 12:58:25 by relamine         ###   ########.fr       */
+/*   Created: 2024/11/21 04:51:51 by relamine          #+#    #+#             */
+/*   Updated: 2024/11/21 12:07:46 by relamine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "FragTrap.hpp"
+#pragma once
 
-int main()
+#include "ClapTrap.hpp"
+
+class ScavTrap : virtual public ClapTrap
 {
-	FragTrap l("Luffy");
-	FragTrap t("Teach");
+	public :
+		ScavTrap();
+		ScavTrap(std::string Name);
+		ScavTrap(const ScavTrap& c);
+		ScavTrap& operator=(const ScavTrap& c);
+		~ScavTrap();
+		void attack(const std::string& target);
+		void guardGate();
+};
 
-	t.attack("Luffy");
-	l.takeDamage(20);
-	l.beRepaired(10);
-	l.attack("Teach");
-	t.takeDamage(20);
-	l.highFivesGuys();
-}
