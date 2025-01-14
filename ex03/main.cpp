@@ -6,9 +6,11 @@
 /*   By: relamine <relamine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 02:50:49 by relamine          #+#    #+#             */
-/*   Updated: 2024/11/21 12:55:32 by relamine         ###   ########.fr       */
+/*   Updated: 2025/01/14 11:44:22 by relamine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "DiamondTrap.hpp"
 
 #include "DiamondTrap.hpp"
 
